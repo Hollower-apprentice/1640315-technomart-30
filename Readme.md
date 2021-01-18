@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Денис Макушкин](https://up.htmlacademy.ru/htmlcss/30/user/1640315).
-* Наставник: `Неизвестно`.
+* Наставник: [Тина Кузьменко](https://htmlacademy.ru/profile/tina_kuzmenko).
 
 ---
 
