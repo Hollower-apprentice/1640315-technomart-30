@@ -449,8 +449,36 @@ footer {
   color: var(--special-yellowlight);
 }
 
+.footer-navigation-up:hover,
+.footer-navigation-down:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation-up:active,
+.footer-navigation-down:active {
+  opacity: 0.5;
+}
+
+.social-network {
+  background: #212A3A;
+  border-radius: 50%;
+}
+
+.social-network:hover,
+.social-network:active {
+  background-color: var(--basic-red);
+}
+
 .footer-reserved-link {
   color: var(--special-yellowlight);
+}
+
+.footer-reserved-link:hover {
+  text-decoration: underline;
+}
+
+.footer-reserved-link:active {
+  color: var(--basic-red);
 }
 
 .feedback-popup {
