@@ -41,34 +41,52 @@ img {
 }
 
 .header-menu {
-  height: 47px;
   background: var(--dark-gray);
 }
 
-.header-logo {
-  width: 220px;
-  height: 47px; 
+.logo {
+  padding: 12px 56px 17px;
   background: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
-.logo {
-  text-align: center;
+.header-search {
+  background-color: var(--dark-gray);
+  border: 0;
 }
 
-.bookmark,
-.basket {
+.header-search:hover,
+.header-search:focus {
+  border: 0;
+  background-color: var(--basic-white);
+}
+
+.header-item {
   color: var(--basic-white);
 }
 
+.bookmark:active,
+.basket:active {
+  padding: 9px 19px;
+  background-color: #161D29;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .order {
+  padding: 9px 19px;
   background: var(--basic-green);
-  color: var(--basic-white)
+}
+
+.order:hover {
+  background-color: #5FBB2D;
+}
+
+.order:active {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .site-description {
   width: 197px;
-  height: 71px;
   color: var(--basic-red);
   font-style: italic;
   font-size: 16px;
@@ -88,8 +106,8 @@ img {
   font-size: 14px;
 }
 
-.header-entrance,
-.header-registration {
+.header-check {
+  padding: 12px 24px;
   background: var(--basic-white);
   color: var(--basic-black);
   font-size: 21px;
@@ -97,37 +115,72 @@ img {
   text-transform: uppercase;
 }
 
-.submenu {
-  background: var(--basic-gray);
-  box-shadow: inset 0px -5px 0px var(--dark-gray) ;
+.header-check:hover {
+  color: var(--basic-red);
 }
 
-.navigation{
-  list-style: none;
+.header-check:active {
+  color: var(--basic-greylight);
 }
 
-.navigation-block {
+.main-navigation {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--basic-gray);
+  font-size: 17px;
+  margin-top: 38px;
+  padding: 0 23px;
+  box-shadow: inset 0px -5px 0px var(--dark-gray);
   color: var(--basic-white);
 }
 
-.services-list {
+.main-navigation ul {
   list-style: none;
 }
 
-.services-item {
+.main-navigation li {
+  display: inline;
+}
+
+.main-navigation a {
+  padding: 16px 30px 15px;
+  color: var(--basic-white);
+}
+
+.main-navigation a:hover {
+  padding: 16px 30px 15px;
+  background-color: #293449;
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.main-navigation a:active {
+  background-color: #1D2739;
+  color: rgba(255, 255, 255, 1);
+}
+
+.services-list ul {
+  list-style: none;
   color: var(--basic-white);
   font-size: 24px;
   line-height: 30px;
-  text-transform: uppercase;
 }
 
 .services-link {
-  background-color: rgba(225,225,225,0.3);
+  padding: 10px 20px;
+  background-color: rgba(225, 225, 225, 0.3);
   background-size: 135px 38px;
   color: var(--basic-white);
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.services-link:hover {
+  background: rgba(197, 197, 197, 0.3)
+}
+
+.services-link:active {
+  background-color: rgba(169, 169, 169, 0.3);
 }
 
 .materials {
@@ -139,7 +192,7 @@ img {
 .tool {
   background: var(--special-blue);
   width: 300px;
-  height: 123px;  
+  height: 123px;
 }
 
 .technique {
@@ -149,7 +202,8 @@ img {
 }
 
 .sale {
-  background: var(--special-greenlight);width: 300px;
+  background: var(--special-greenlight);
+  width: 300px;
   width: 300px;
   height: 123px;
 }
@@ -160,7 +214,19 @@ img {
   height: 123px;
 }
 
+.slider-item {
+  background-color: var(--basic-gray);
+  width: 620px;
+}
+
+.slider-item h2 {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
 .button {
+  padding: 10px 25px ;
   background: var(--basic-red);
   background-size: 192px 38px;
   color: var(--basic-white);
@@ -169,18 +235,26 @@ img {
   text-transform: uppercase;
 }
 
-.section-block {
+.button:hover {
+  background-color: #CA2C37;
+}
+
+.button:active {
+  background: #BA2732;
+}
+
+.popular-list {
   background: var(--light-gray-orange);
 }
 
-.block-name {
+.popular-list h2 {
   color: var(--basic-gray);
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.product-box {
+.product-list {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: bold;
@@ -190,11 +264,20 @@ img {
   list-style: none;
 }
 
-.product-container {
+.product-item {
+  margin-top: 20px;
   height: 318px;
   width: 220px;
   border: 1px solid #EAEAEA;
-  text-align: center ;
+  text-align: center;
+}
+
+.product-item img {
+  padding: 6px 18px;
+}
+
+.product-item:hover {
+  box-shadow: 2px 4px 10px #000000;
 }
 
 .old-price {
@@ -209,6 +292,7 @@ img {
 }
 
 .buy {
+  padding: 5px 20px;
   font-family: "Cuprum";
   font-size: 14px;
   line-height: 18px;
@@ -216,11 +300,22 @@ img {
   height: 38px;
   width: 135px;
   background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
   background-size: 135px 38px;
+  border-radius: 2px;
   color: var(--basic-white);
 }
 
+.buy:hover {
+  background-color: #5FBB2D;
+}
+
+.buy:active {
+  background-color: #518534;
+}
+
 .bookmarks {
+  padding: 2px 10px;
   font-family: "Cuprum";
   font-size: 14px;
   line-height: 18px;
@@ -228,59 +323,111 @@ img {
   height: 38px;
   width: 135px;
   color: var(--basic-gray);
-  border: 3px solid var(--basic-green)
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
 }
 
-.container-manufactur {
+.bookmarks:hover {
+  border-color: #32425C;
+}
+
+.bookmarks:active {
+  opacity: 0.3;
+}
+
+.brand-item {
+  margin: 10px;
+  padding: 15px;
   border: 1px solid #EAEAEA;
   box-sizing: border-box;
   width: 220px;
   height: 145px;
-  text-align: center;
+}
+
+.brand-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .services-info {
   background-color: #F1F5F7;
 }
 
-.services-delivery-button {
-  color: var(--basic-gray);
-  background-color: var(--basic-white);
-  background-size: 240px 61px;
-}
-
-.services-guarantee-button,
-.services-credit-button {
-  color: var(--basic-white);
-  background-color: var(--basic-gray);
-  background-size: 240px 61px;
-}
-
-.title {
+.services-title h2 {
   color: #000000;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.description {
+.services-title p {
   font-family: "PT Sans";
   font-size: 13px;
   line-height: 24px;
   color: #000000;
 }
 
-.partners {
-  color: #000000;
+.services-button {
+  padding: 13.5px 140px 17.5px 22px;
+  border: none;
+  background-color: var(--basic-gray);
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 30px;
 }
 
+.services-button:hover {
+  background-color: var(--dark-gray);
+}
+
+.services-button:checked,
+.services-button:active {
+  color: var(--basic-gray);
+  background-color: white;
+}
+
+.services-description h2 {
+  color: var(--basic-gray);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services-description p {
+  font-family: "PT Sans";
+  color: #000000;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.company-info h2 {
+  color: #000000;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.company-info p {
+  font-family: "PT Sans";
+  color: #000000;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.partners-list li {
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
 .footer-logo {
+  padding: 20px 41px;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-  background-size: 220px 68px;
 }
 
 footer {
+  margin-top: 70px;
   background-color: var(--basic-gray);
 }
 
@@ -309,6 +456,7 @@ footer {
 .feedback-popup {
   height: 430px;
   width: 620px;
+  border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
   filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
   font-family: "Cuprum";
@@ -317,9 +465,42 @@ footer {
   color: #000000;
 }
 
-.map-popup {
-  width: 943px; 
-  height: 449px;
-  background: rgba(0, 0, 0, 0.0001); 
+.entrance {
+  width: 220px;
+  height: 39px; 
+
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+  border: 2px solid #C5C5C5;
+  border-radius: 2px;
 }
 
+.down {
+  width: 460px;
+  height: 116px;
+}
+
+.pop-up-button {
+  padding: 10px 200px;
+  background: #EE3643;
+  color: var(--basic-white);
+  
+}
+
+.map-popup {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.blind-title:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
